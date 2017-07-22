@@ -1,0 +1,16 @@
+<div class="container">
+    <form>
+        <fieldset class="form-group">
+            <label class="control-label">Email Address</label>
+            {{input type="email" value=emailAddress class="form-control" placeholder="Please type your e-mail address." autofocus="autofocus"}}
+        </fieldset>
+        <fieldset class="form-group">
+            <label class="control-label">Message</label>
+            {{textarea class="form-control" placeholder="Your message (At least 5 characters.)" rows="7" value=message}}
+        </fieldset>
+        <button class="btn btn-primary btn-lg btn-block" {{action 'submitMessage'}} disabled={{isDisabled}}>Send Message</button>
+    </form>
+    {{#if responseMessage}}
+        <div class="alert alert-success">{{responseMessage}}</div>
+    {{/if}}
+</div>
