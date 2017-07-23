@@ -2,13 +2,13 @@
     <form>
         <fieldset class="form-group">
             <label class="control-label">Email Address</label>
-            {{input type="email" value=emailAddress class="form-control" placeholder="Please type your e-mail address." autofocus="autofocus"}}
+            {{input type="email" value=model.email class="form-control" placeholder="Please type your e-mail address." autofocus="autofocus"}}
         </fieldset>
         <fieldset class="form-group">
             <label class="control-label">Message</label>
-            {{textarea class="form-control" placeholder="Your message (At least 5 characters.)" rows="7" value=message}}
+            {{textarea class="form-control" placeholder="Your message (At least 5 characters.)" rows="7" value=model.message}}
         </fieldset>
-        <button class="btn btn-primary btn-lg btn-block" {{action 'submitMessage'}} disabled={{isDisabled}}>Send Message</button>
+        <button class="btn btn-primary btn-lg btn-block" {{action 'submitMessage' model}} disabled={{isDisabled}}>Send Message</button>
     </form>
     {{#if responseMessage}}
         <div class="alert alert-success">{{responseMessage}}</div>

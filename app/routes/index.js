@@ -2,19 +2,18 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
     model() {
-        return this.store.createRecord('contact');
+        return this.store.createRecord('invitation');
     },
 
     actions: {
-        submitMessage(contact) {
-            contact.save()
-                .then(() => {
-                    this.set('responseMessage', `Thank you! We've just sent your message. You'll get a response at ${this.get('emailAddress')}`);
+        saveInvitation(invitation) {
+            invitation.save()
+                .then(r => {
+                    this.controller.set('responseMessage', `Thank you! We've just saved your email address witht the following id: ${r.get('id')}`);
                     this.controller.set('model.email', '');
-                    this.controller.set('model.message', '');
                 });
         },
-
+        
         willTransition() {
             // rollbackAttributes() removes the record from the store
             // if the model 'isNew'
