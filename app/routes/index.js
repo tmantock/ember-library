@@ -12,6 +12,14 @@ export default Ember.Route.extend({
                     this.controller.set('responseMessage', `Thank you! We've just saved your email address witht the following id: ${r.get('id')}`);
                     this.controller.set('model.email', '');
                 });
+
+            // $.ajax({
+            //     type: 'POST',
+            //     url: 'http://localhost/testember/test.php',
+            //     data: {name: "John", location: "Boston"}
+            // }).then(r => {
+            //     console.log(r);
+            // });
         },
         
         willTransition() {
