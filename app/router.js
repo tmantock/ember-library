@@ -20,6 +20,7 @@ Router.map(function() {
     this.route('new');
     this.route('edit', { path: '/:library_id/edit'});
   });
+  this.route('flex');
 });
 
 export default Router;

@@ -40,3 +40,16 @@ html {
   from { -webkit-transform: rotate(0deg); }
   to { -webkit-transform: rotate(360deg); }
 }
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  height: 500px;
+
+  .flexbox {
+    width: 200px;
+    border: 1px solid black;
+    box-sizing: border-box;
+  }
+}
