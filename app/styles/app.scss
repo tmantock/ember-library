@@ -41,15 +41,20 @@ html {
   to { -webkit-transform: rotate(360deg); }
 }
 
+.vtop {
+  vertical-align: top!important;
+}
+
+.not-bold {
+  font-weight: normal!important;
+}
+
 .flex-container {
   display: flex;
   flex-flow: row wrap;
-  align-items: stretch;
-  height: 500px;
+  justify-content: space-between;
 
-  .flexbox {
-    width: 200px;
-    border: 1px solid black;
-    box-sizing: border-box;
+  .flex-library {
+    width: 390px;
   }
 }
