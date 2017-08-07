@@ -6,7 +6,6 @@ export default DS.Model.extend({
 
   name: DS.attr('string'),
   books: DS.hasMany('book', {inverse: 'author', async: true}),
-
   isNotValid: Ember.computed.empty('name'),
 
   randomize() {
