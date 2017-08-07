@@ -1,0 +1,6 @@
+{
+  "name": "library",
+  "dependencies": {
+    "Faker": "^4.1.0"
+  }
+}
